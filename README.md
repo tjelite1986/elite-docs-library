@@ -1,6 +1,6 @@
-# Cookbook
+# Elite Docs Library
 
-A public cookbook of guides, prompts, and other reusable documentation.
+A public library of guides, prompts, and other reusable documentation.
 Everything here is meant to be read directly on GitHub — each section has its
 own `README.md` index, and every document is a standalone Markdown file.
 

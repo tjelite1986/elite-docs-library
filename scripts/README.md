@@ -11,6 +11,7 @@ file executable (`chmod +x`), and wire it into cron where noted.
 | [git-auto-backup.sh](git-auto-backup.sh) | Cron-driven auto-commit + push of any directory (Obsidian vault, config folder) to a private git repo. Silent when clean, retries failed pushes on the next run. |
 | [deploy-verify.sh](deploy-verify.sh) | Deploy that can't lie: waits for the CI run of your exact commit, pulls, and proves the container runs the new image by comparing image IDs. |
 | [docker-cleanup.sh](docker-cleanup.sh) | Weekly disk hygiene for a Docker host — prunes dangling images, old build cache, old stopped containers and unused networks. Never touches volumes or tagged images. |
+| [telegram-claude-bot.py](telegram-claude-bot.py) | Personal Telegram ↔ Claude Code bridge with live streaming progress and per-user persistent sessions. Setup + security model: [the guide](../guides/telegram-claude-code-bot.md). |
 
 ## Conventions
 

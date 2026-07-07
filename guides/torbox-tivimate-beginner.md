@@ -107,6 +107,9 @@ docker compose version
 ## 5. Create your TorBox account
 
 1. Open: <https://www.torbox.app/subscription?referral=81e7dd1a-8471-4341-89ce-49b54a4895ab>
+   > **Disclosure:** this is a referral link — signing up through it gives the
+   > guide author account credit at no extra cost to you. Prefer a clean
+   > signup? Use <https://www.torbox.app/> instead.
 2. Sign up and subscribe to the **Pro Plan ($10/month)**.
 3. Go to **Settings → API**, create/copy your **API key**, and make sure
    **WebDAV** access is enabled for it.

@@ -49,6 +49,9 @@ logging.basicConfig(
     level=logging.INFO,
 )
 LOG = logging.getLogger("tg-claude")
+# httpx logs every Telegram API request URL at INFO — which includes the bot
+# token. Keep it at WARNING so the token never lands in the log file.
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
 CONFIG_PATH = Path(
     os.environ.get("TG_CLAUDE_CONFIG", "~/.config/telegram-claude-bot.env")

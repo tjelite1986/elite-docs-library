@@ -1,4 +1,4 @@
-# Docs
+# Knowledge
 
 A public collection of guides, prompts, and other reusable documentation.
 Everything here is meant to be read directly on GitHub — each section has its

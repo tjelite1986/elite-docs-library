@@ -11,6 +11,7 @@ prompt patterns that have proven useful.
 | [Structured data from OCR](structured-data-from-ocr.md) | Extract strict JSON from noisy OCR text (receipts, invoices): integer minor-unit money, no hallucinated fields, self-checking against the printed total. |
 | [Multi-LLM council synthesis](multi-llm-synthesis.md) | Merge independent answers from several models into one best answer — surfacing disagreements and ruling on them instead of averaging them away. |
 | [Sanitize for public release](sanitize-for-public.md) | Pre-publication review pass that hunts credentials, real hostnames, identities, and sneaky identifiers in docs about to go public. |
+| [Verify AI code-review findings](verify-ai-code-review.md) | Adversarial second pass over an AI review: trace each finding against the real code and rule CONFIRMED or FALSE POSITIVE before anything gets "fixed". |
 
 ## Conventions
 

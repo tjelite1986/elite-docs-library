@@ -165,7 +165,7 @@ replace **`PUT_YOUR_TORBOX_API_KEY_HERE`** with the key from Step 5:
       "api_key": "PUT_YOUR_TORBOX_API_KEY_HERE",
       "use_webdav": true,
       "rate_limit": "100/minute",
-      "download_rate_limit": "30/minute",
+      "download_rate_limit": "12/minute",
       "repair_rate_limit": "10/minute",
       "workers": 1,
       "torrents_refresh_interval": "2m",
@@ -429,6 +429,10 @@ docker compose pull && docker compose up -d   # update to newest versions
 | Download stuck in queue | TorBox hasn't finished caching that release yet — wait, or pick another release. |
 | Movie not in TiviMate | Confirm the file is in `/mnt/media/movies`, then rescan the library in m3u-editor. |
 | Playback buffers a lot | The file isn't fully cached on TorBox yet, or your internet upload is slow. Try again shortly. |
+| Radarr/Sonarr show "Unexpected error processing file" or "Unable to determine if file is a sample" on many files after adding a big batch | Harmless timing issue: the cloud mount lags a minute or two behind new grabs, and TorBox rate-limits link requests during bursts. The imports retry every minute and fix themselves — don't delete anything. |
+| Freshly added movies/episodes won't PLAY right after a big batch (I/O errors, player gives up) | TorBox has an hourly quota for creating download links, and a mass import eats it. The files are fine — wait up to an hour and try again. |
+| EVERYTHING refuses to play for hours, Decypharr log is full of `429` even when idle | Decypharr's own `download_rate_limit` queue has jammed (pending retries saturate it faster than it drains). Restart the source of retries (Sonarr/Radarr), then `docker restart decypharr` to clear the backlog. |
+| Every movie/episode suddenly gives "Access denied"/403 in m3u-editor after an image update, but plain (non-symlinked) files still play | A newer m3u-editor added a strict path check that rejects symlinked libraries — exactly what this stack uses. See [m3u-editor issue #1249](https://github.com/m3ue/m3u-editor/issues/1249); pin your previous working image tag until the fix ships. |
 | Nothing works after reboot | Run `docker compose up -d` again; Decypharr recreates the mount on start. |
 
 ---

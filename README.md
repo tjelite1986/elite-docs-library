@@ -10,7 +10,7 @@ own `README.md` index, and every document is a standalone Markdown file.
 
 | Section | What's in it |
 |---------|--------------|
-| [guides/](guides/) | Step-by-step setup and how-to guides: reverse proxy with wildcard HTTPS, Next.js in Docker, auto-deploy pipelines, a simple NAS, self-hosted Obsidian sync, and a full streaming stack. |
+| [guides/](guides/) | Step-by-step setup and how-to guides: reverse proxy with wildcard HTTPS, Next.js in Docker, auto-deploy pipelines, a simple NAS, self-hosted Obsidian sync, a full streaming stack, and [exporting browser cookies for `yt-dlp`/`gallery-dl`](guides/cookies-txt-export-desktop-android.md). |
 | [prompts/](prompts/) | Reusable prompts for LLMs and AI tools: writing beginner guides, structured OCR extraction, multi-model answer synthesis, verifying AI code reviews, and pre-publication sanitization. |
 | [scripts/](scripts/) | Small self-contained shell scripts: git auto-backup from cron, verified CI deploys, Docker disk hygiene. |
 
